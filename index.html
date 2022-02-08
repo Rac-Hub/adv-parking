@@ -9,12 +9,15 @@
 <html>
   <head>
     <title>ADV-Parking</title>
+    <!--<script src="http://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
+    <script src="http://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"></script>-->
   </head>
   <body>
     <script type="module">
       // Import the functions you need from the SDKs you need
-      import { initializeApp } from "firebase/app";
-      import { getAnalytics } from "firebase/analytics";
+      import { initializeApp } from "http://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+      //import { getFirestore } from "http://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+      //import { getAnalytics } from "http://www.gstatic.com/firebasejs/9.4.0/firebase-analytics.js";
       // TODO: Add SDKs for Firebase products that you want to use
       // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -26,13 +29,26 @@
         projectId: "adv-parking",
         storageBucket: "adv-parking.appspot.com",
         messagingSenderId: "744275810897",
-        appId: "1:744275810897:web:7dd474cdec1747c0637670",
-        measurementId: "G-3VB3SB7L7Q"
+        appId: "1:744275810897:web:a7c6988bdd220f27637670",
+        measurementId: "G-TCVCK746Y6"
       };
 
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
+      //export const fs = getFirestore(app);
+      //const analytics = getAnalytics(app);
+
+      //Fetching DataBase Collection:
+      /*const db = app.firestore();
+
+      db.settings({timestampsInSnapshots: true});
+      db.collection('user').get().then((snapshot) => {
+          snapshot.docs.forEach(docs => {
+            console.log(doc.data())
+          });
+      })*/
+
     </script>
-</body>
+    <h1>Hello World!</h1>
+  </body>
 </html>
